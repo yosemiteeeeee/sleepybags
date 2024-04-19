@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1713543237 source:c:\users\artsh\desktop\sb\repo\main.cpp
+	<iostream>
+	<string>
+	"header.h"
+
+1713543165 c:\users\artsh\desktop\sb\repo\header.h
+	<iostream>
+	<string>
+

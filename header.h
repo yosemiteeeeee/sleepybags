@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-// spalniy meshok
+// Спальный мешок
 class SpMeshok
 {
 protected:
@@ -33,31 +33,34 @@ private:
 public:
     Kokon(std::string brand, int tempRating, std::string insulation) : SpMeshok(brand, tempRating), insulationType(insulation) {}
 
-    void describe() override
+    virtual void describe() override
     {
-        std::cout << "Brand: " << brand << ", Temperature Rating: " << temperatureRating << "C, " << "insulation type: " << insulationType << std::endl;
+        std::cout << "Brand: " << brand << ", Temperature Rating: " << temperatureRating << " C, " << "Insulation type: " << insulationType << std::endl;
     }
 
-    void hoodUp()
+    virtual void hoodUp()
     {
-        std::cout << "Pulling up the hood" << std::endl;
+        std::cout << "Wrap yourself in the cocoon" << std::endl;
     }
 };
 
 // мешок-одеяло
-class Odeyalo : public SpMeshok {
+class Odeyalo : public SpMeshok
+{
 private:
     bool zipperOnBothSides; // молния с обеих сторон
 
 public:
     Odeyalo(std::string brand, int tempRating, bool doubleZipper) : SpMeshok(brand, tempRating), zipperOnBothSides(doubleZipper) {}
 
-    void describe() override {
-        std::cout << "Brand: " << brand << ", Temperature Rating: " << temperatureRating << "C, Double Zipper: " << (zipperOnBothSides ? "Yes" : "No") << std::endl;
+    virtual void describe() override
+    {
+        std::cout << "Brand: " << brand << ", Temperature Rating: " << temperatureRating << " C, Double Zipper: " << (zipperOnBothSides ? "Yes" : "No") << std::endl;
     }
 
-    void unzipCompletely() {
-        std::cout << "Unzipping the bag" << std::endl;
+    virtual void unzipCompletely()
+    {
+        std::cout << "Unzip the bag and lie down" << std::endl;
     }
 };
 
