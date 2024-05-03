@@ -5,39 +5,21 @@
 #include "containers.h"
 #include "decorators.h"
 #include "iterators.h"
+#include "fm.h"
 
 int main() {
+    srand(static_cast<unsigned>(time(nullptr)));
+
     VectorContainer vecContainer;
-    ArrayContainer arrContainer;
+    KokonFactory kokonFactory;
+    OdeyaloFactory odeyaloFactory;
 
-    vecContainer.insert(new Kokon("Yeti", -10, "Down"));
-    vecContainer.insert(new Odeyalo("Patagonia", -2, false));
 
-    arrContainer.insert(new Kokon("Mountain Hardwear", -8, "Synthetic"));
-    arrContainer.insert(new Odeyalo("Columbia", 3, true));
+    populateContainer(vecContainer, kokonFactory, rand() % 5 + 1);
+    populateContainer(vecContainer, odeyaloFactory, rand() % 5 + 1);
 
-    std::cout << "Items in VectorContainer:" << std::endl;
-    VectorContainerIterator vecIterator = vecContainer.createIterator();
-    while (vecIterator.hasNext()) {
-        vecIterator.next()->describe();
-    }
 
-    std::cout << "\nItems in ArrayContainer (Reversed):" << std::endl;
-    ArrayContainerIterator arrIterator = arrContainer.createIterator();
-    ReverseDecorator reversedArrIterator(&arrIterator);
-    while (reversedArrIterator.hasNext()) {
-        reversedArrIterator.next()->describe();
-    }
+    vecContainer.display();
 
-    auto& vecItems = vecContainer.getItems();
-    VectorContainerIterator vecIteratorFiltered = vecContainer.createIterator();
-    Iterator* filteredIterator = new FilterDecorator(&vecIteratorFiltered, vecIteratorFiltered.getLambdaFilter());
-
-    std::cout << "\nItems in VectorContainer (Filtered by Temperature < 0):" << std::endl;
-    while (filteredIterator->hasNext()) {
-        filteredIterator->next()->describe();
-    }
-
-    delete filteredIterator;
     return 0;
 }

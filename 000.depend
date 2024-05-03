@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714766535 source:c:\users\artsh\desktop\sb\repo\main.cpp
+1714768895 source:c:\users\artsh\desktop\sb\repo\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -7,6 +7,7 @@
 	"containers.h"
 	"decorators.h"
 	"iterators.h"
+	"fm.h"
 
 1714763238 c:\users\artsh\desktop\sb\repo\header.h
 	<iostream>
@@ -41,4 +42,12 @@
 	"header.h"
 	"iterators.h"
 	"containers.h"
+
+1714768872 c:\users\artsh\desktop\sb\repo\fm.h
+	<iostream>
+	<string>
+	<vector>
+	<cstdlib>
+	<ctime>
+	"header.h"
 
