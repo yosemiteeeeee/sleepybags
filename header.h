@@ -5,6 +5,9 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <list>
+#include <algorithm>
 
 // Спальный мешок
 class SpMeshok
@@ -17,6 +20,10 @@ public:
     SpMeshok(std::string brand, int tempRating) : brand(brand), temperatureRating(tempRating) {}
 
     virtual void describe() = 0;
+
+    int getTemperatureRating() const {
+        return temperatureRating;
+    }
 
     virtual void use()
     {
@@ -63,5 +70,7 @@ public:
         std::cout << "Unzip the bag and lie down" << std::endl;
     }
 };
+
+
 
 #endif // HEADER_H_INCLUDED

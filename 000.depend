@@ -1,10 +1,43 @@
 # depslib dependency file v1.0
-1713543237 source:c:\users\artsh\desktop\sb\repo\main.cpp
+1714761438 source:c:\users\artsh\desktop\sb\repo\main.cpp
 	<iostream>
 	<string>
+	<vector>
+	"header.h"
+	"containers.h"
+	"decorators.h"
+	"iterators.h"
+
+1714756196 c:\users\artsh\desktop\sb\repo\header.h
+	<iostream>
+	<string>
+	<vector>
+	<list>
+	<algorithm>
+
+1714761312 c:\users\artsh\desktop\sb\repo\containers.h
+	<vector>
+	<list>
+	<algorithm>
+	"iterators.h"
 	"header.h"
 
-1713543165 c:\users\artsh\desktop\sb\repo\header.h
+1714761312 c:\users\artsh\desktop\sb\repo\iterators.h
 	<iostream>
 	<string>
+	<vector>
+	<list>
+	<algorithm>
+	"header.h"
+	"containers.h"
+
+1714761806 c:\users\artsh\desktop\sb\repo\decorators.h
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<functional>
+	"header.h"
+	"iterators.h"
+	"containers.h"
 
