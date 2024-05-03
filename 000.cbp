@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="8.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="containers.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -48,6 +51,9 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="punkt8.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
