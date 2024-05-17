@@ -80,7 +80,7 @@ private:
 
 public:
     ReverseDecorator(Iterator* iter) : iterator(iter), currentIndex(-1) {
-        reversedItems.reserve(10); // Reserve some space to avoid frequent resizing
+        reversedItems.reserve(10);
         while (iterator->hasNext()) {
             reversedItems.push_back(iterator->next());
         }

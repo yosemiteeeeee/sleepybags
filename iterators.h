@@ -55,4 +55,7 @@ public:
         return items[currentIndex++];
     }
 };
+
+
+
 #endif // ITERATORS_H_INCLUDED

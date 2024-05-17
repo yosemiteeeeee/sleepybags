@@ -21,9 +21,13 @@ public:
 
     virtual void describe() = 0;
 
+    std::string getBrand() const {
+    return brand;
+    }
     int getTemperatureRating() const {
         return temperatureRating;
     }
+
 
     virtual void use()
     {
@@ -39,6 +43,14 @@ private:
 
 public:
     Kokon(std::string brand, int tempRating, std::string insulation) : SpMeshok(brand, tempRating), insulationType(insulation) {}
+
+    std::string getInsulationType() const {
+    return insulationType;
+    }
+
+    std::string getBrand() const {
+    return brand;
+    }
 
     virtual void describe() override
     {
@@ -59,6 +71,14 @@ private:
 
 public:
     Odeyalo(std::string brand, int tempRating, bool doubleZipper) : SpMeshok(brand, tempRating), zipperOnBothSides(doubleZipper) {}
+
+    std::string getBrand() const {
+    return brand;
+    }
+
+    bool hasZipperOnBothSides() const {
+    return zipperOnBothSides;
+    }
 
     virtual void describe() override
     {

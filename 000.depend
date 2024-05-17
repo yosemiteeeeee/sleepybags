@@ -1,29 +1,32 @@
 # depslib dependency file v1.0
-1714774510 source:c:\users\artsh\desktop\sb\repo\main.cpp
+1715979418 source:c:\users\artsh\desktop\sb\repo\main.cpp
 	<iostream>
 	<string>
 	<vector>
+	"sqlite3.h"
 	"header.h"
 	"containers.h"
 	"decorators.h"
 	"iterators.h"
 	"fm.h"
 
-1714763238 c:\users\artsh\desktop\sb\repo\header.h
+1715978144 c:\users\artsh\desktop\sb\repo\header.h
 	<iostream>
 	<string>
 	<vector>
 	<list>
 	<algorithm>
 
-1714774263 c:\users\artsh\desktop\sb\repo\containers.h
+1715979598 c:\users\artsh\desktop\sb\repo\containers.h
 	<vector>
 	<list>
 	<algorithm>
+	<iostream>
+	"sqlite3.h"
 	"iterators.h"
 	"header.h"
 
-1714764445 c:\users\artsh\desktop\sb\repo\iterators.h
+1715964302 c:\users\artsh\desktop\sb\repo\iterators.h
 	<iostream>
 	<string>
 	<vector>
@@ -33,7 +36,7 @@
 	"containers.h"
 	"decorators.h"
 
-1714762867 c:\users\artsh\desktop\sb\repo\decorators.h
+1715962489 c:\users\artsh\desktop\sb\repo\decorators.h
 	<iostream>
 	<string>
 	<vector>
@@ -43,11 +46,189 @@
 	"iterators.h"
 	"containers.h"
 
-1714768872 c:\users\artsh\desktop\sb\repo\fm.h
+1715971714 c:\users\artsh\desktop\sb\repo\fm.h
 	<iostream>
 	<string>
 	<vector>
 	<cstdlib>
 	<ctime>
 	"header.h"
+
+1715958942 c:\users\artsh\desktop\sb\repo\sqlite3.h
+	<stdarg.h>
+
+1715951497 source:c:\users\artsh\desktop\sb\repo\shell.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<math.h>
+	"sqlite3.h"
+	"sqlite3userauth.h"
+	<ctype.h>
+	<stdarg.h>
+	<signal.h>
+	<pwd.h>
+	<unistd.h>
+	<dirent.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<readline/readline.h>
+	<readline/history.h>
+	<editline/readline.h>
+	"linenoise.h"
+	<io.h>
+	<fcntl.h>
+	<intrin.h>
+	<windows.h>
+	<stdio.h>
+	<stdarg.h>
+	<string.h>
+	<stdlib.h>
+	<limits.h>
+	<assert.h>
+	"console_io.h"
+	<io.h>
+	<fcntl.h>
+	<windows.h>
+	<unistd.h>
+	<sys/time.h>
+	<sys/resource.h>
+	"windows.h"
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<io.h>
+	<limits.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<assert.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<string.h>
+	<stdarg.h>
+	<assert.h>
+	<string.h>
+	<ctype.h>
+	<assert.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	<assert.h>
+	<stdio.h>
+	<memory.h>
+	<string.h>
+	<assert.h>
+	<ctype.h>
+	<io.h>
+	<fcntl.h>
+	<assert.h>
+	<string.h>
+	<assert.h>
+	<string.h>
+	<limits.h>
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<dirent.h>
+	<utime.h>
+	<sys/time.h>
+	"windows.h"
+	<io.h>
+	<direct.h>
+	<time.h>
+	<errno.h>
+	"test_windirent.c"
+	<assert.h>
+	<string.h>
+	<ctype.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<stdint.h>
+	<zlib.h>
+	<zlib.h>
+	<assert.h>
+	<assert.h>
+	<string.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<assert.h>
+	<string.h>
+
+1715957344 source:c:\users\artsh\desktop\sb\repo\sqlite3.c
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"sqlite_cfg.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<TargetConditionals.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<Windows.h>
+	"sqlite_tcl.h"
+	"tcl.h"
+	"sqlite3rtree.h"
+	<ctype.h>
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<math.h>
 
