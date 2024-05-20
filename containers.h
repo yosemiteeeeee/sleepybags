@@ -97,7 +97,7 @@ public:
                 exit(1);
             } else
             {
-                std::cout << "Opened database successfully" << std::endl;
+                std::cout << "\nOpened database successfully" << std::endl;
             }
     }
 
