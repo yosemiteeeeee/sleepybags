@@ -36,8 +36,9 @@ int main() {
 
 
     // METHOD insert
-    SpMeshok* insertMeshok = new Odeyalo("InsertBrand", 12, true);
-    SQLiteSpMeshokContainer.insert(insertMeshok);
+    //SpMeshok* insertMeshok = new Kokon("Columbia", -20, "Down");
+
+//  SQLiteSpMeshokContainer.insert(insertMeshok);
 
     // METHOD display
     SQLiteSpMeshokContainer.display();
@@ -47,13 +48,18 @@ int main() {
     // SQL-ITERATOR
     SQLiteSpMeshokIterator sqlIterator(SQLiteSpMeshokContainer.getDB(), selectQuery);
 
-    std::cout << "Items from SQL Container:" << std::endl;
+    std::cout << "\nItems from SQL Container:" << std::endl;
     while (sqlIterator.hasNext()) {
         SpMeshok* item = sqlIterator.next();
         if (item) {
             item->describe();
         }
     }
+
+    SQLDecorator* sqlDecorator = new SQLDecorator(&sqlIterator, SQLiteSpMeshokContainer.getDB());
+
+    std::cout << "\nSQL Queries for SleepyBags Table:" << std::endl;
+    sqlDecorator->displaySQLFormat();
 
     return 0;
 }

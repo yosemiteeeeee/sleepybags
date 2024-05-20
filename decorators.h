@@ -100,4 +100,46 @@ public:
     }
 };
 
+// SQL decorator
+class SQLDecorator : public Iterator {
+private:
+    Iterator* iterator;
+    sqlite3* db;
+
+public:
+    SQLDecorator(Iterator* iter, sqlite3* database) : iterator(iter), db(database) {}
+
+    bool hasNext() const override {
+        return iterator->hasNext();
+    }
+
+    SpMeshok* next() override {
+        return iterator->next();
+    }
+
+    // Добавим метод, который будет выводить информацию о каждом элементе в формате SQL-запроса
+    void displaySQLFormat() {
+        while (hasNext()) {
+            SpMeshok* item = next();
+            if (item) {
+                std::cout << "INSERT INTO SleepyBags (Brand, TemperatureRating, Type, InsulationType, DoubleZipper) VALUES ('"
+                          << item->getBrand() << "', " << item->getTemperatureRating();
+                if (Kokon* kokon = dynamic_cast<Kokon*>(item)) {
+                    std::cout << ", 'Kokon', '" << kokon->getInsulationType() << "', 'N/A');";
+                } else if (Odeyalo* odeyalo = dynamic_cast<Odeyalo*>(item)) {
+                    std::cout << ", 'Odeyalo', 'N/A', " << (odeyalo->hasZipperOnBothSides() ? "Yes" : "No") << ");";
+                }
+                std::cout << std::endl;
+            }
+        }
+    }
+
+    ~SQLDecorator() override {
+        delete iterator;
+    }
+};
+
+
+
+
 #endif // DECORATORS_H_INCLUDED

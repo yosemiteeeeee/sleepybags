@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1715979418 source:c:\users\artsh\desktop\sb\repo\main.cpp
+1716225822 source:c:\users\artsh\desktop\sb\repo\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -17,7 +17,7 @@
 	<list>
 	<algorithm>
 
-1716197718 c:\users\artsh\desktop\sb\repo\containers.h
+1716223025 c:\users\artsh\desktop\sb\repo\containers.h
 	<vector>
 	<list>
 	<algorithm>
@@ -36,7 +36,7 @@
 	"containers.h"
 	"decorators.h"
 
-1715962489 c:\users\artsh\desktop\sb\repo\decorators.h
+1716225871 c:\users\artsh\desktop\sb\repo\decorators.h
 	<iostream>
 	<string>
 	<vector>
