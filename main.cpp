@@ -20,7 +20,7 @@ int main() {
 
     VectorContainerIterator* iterator = new VectorContainerIterator(vecContainer.accessItems());
 
-    // Декоратор для фильтрации элементов (выберем элементы с температурным рейтингом меньше либо равным 10)
+    // Dekorator dlya filtracii (temperatura <= 10)
     FilterDecorator* filterDecorator = new FilterDecorator(iterator, [](SpMeshok* item) {
         return item->getTemperatureRating() <= 10;
     });
@@ -32,15 +32,28 @@ int main() {
     }
 
     SQLiteSpMeshok SQLiteSpMeshokContainer("sleepybags.db");
-    SQLiteSpMeshokContainer.createTable();
+    //SQLiteSpMeshokContainer.createTable();
 
 
-    // Вызов метода insert
+    // METHOD insert
     SpMeshok* insertMeshok = new Odeyalo("InsertBrand", 12, true);
     SQLiteSpMeshokContainer.insert(insertMeshok);
 
-    // Вызов метода display
+    // METHOD display
     SQLiteSpMeshokContainer.display();
+
+    const char* selectQuery = "SELECT * FROM SleepyBags;";
+
+    // SQL-ITERATOR
+    SQLiteSpMeshokIterator sqlIterator(SQLiteSpMeshokContainer.getDB(), selectQuery);
+
+    std::cout << "Items from SQL Container:" << std::endl;
+    while (sqlIterator.hasNext()) {
+        SpMeshok* item = sqlIterator.next();
+        if (item) {
+            item->describe();
+        }
+    }
 
     return 0;
 }

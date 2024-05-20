@@ -38,7 +38,7 @@ public:
         }
     }
 
-    VectorContainerIterator createIterator(); // объ€вление
+    VectorContainerIterator createIterator();
 };
 
 VectorContainerIterator VectorContainer::createIterator() {
@@ -69,29 +69,36 @@ public:
         }
     }
 
-    ArrayContainerIterator createIterator(); // объ€вление
+    ArrayContainerIterator createIterator();
 };
 
 ArrayContainerIterator ArrayContainer::createIterator() {
     return ArrayContainerIterator(items, currentSize);
 }
 
-// SQL контейнер
-class SQLiteSpMeshok : public Container {
+// SQL container
+class SQLiteSpMeshok : public Container
+{
 private:
     sqlite3 *db;
 
 public:
-    SQLiteSpMeshok(const char* path) {
+    sqlite3* getDB()
+    {
+        return db;
+    }
+    SQLiteSpMeshok(const char* path)
+    {
         int rc = sqlite3_open(path, &db);
-        if (rc) {
-            std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
-            sqlite3_close(db);
-            exit(1);
-        } else
-        {
-            std::cout << "Opened database successfully" << std::endl;
-        }
+        if (rc)
+            {
+                std::cerr << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
+                sqlite3_close(db);
+                exit(1);
+            } else
+            {
+                std::cout << "Opened database successfully" << std::endl;
+            }
     }
 
     ~SQLiteSpMeshok() {
