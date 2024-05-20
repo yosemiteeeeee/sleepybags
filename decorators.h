@@ -33,7 +33,6 @@ public:
     SpMeshok* next() override {
         SpMeshok* item = iterator->next();
         if (item) {
-            std::cout << "[" << order << "] ";
             order++;
         }
         return item;

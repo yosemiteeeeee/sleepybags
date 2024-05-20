@@ -32,13 +32,27 @@ int main() {
     }
 
     SQLiteSpMeshok SQLiteSpMeshokContainer("sleepybags.db");
-    //SQLiteSpMeshokContainer.createTable();
+    SQLiteSpMeshokContainer.createTable();
+    SQLKokonFactory SQLkokonFactory;
+    SQLOdeyaloFactory SQLodeyaloFactory;
 
+    int numOfKokon = rand() % 5 + 1;
+    int numOfOdeyalo = rand() % 5 + 1;
+
+    for (int i = 0; i < numOfKokon; ++i) {
+        SpMeshok* newKokon = SQLkokonFactory.createSpMeshok();
+        SQLiteSpMeshokContainer.insert(newKokon);
+    }
+
+    for (int i = 0; i < numOfOdeyalo; ++i) {
+        SpMeshok* newOdeyalo = SQLodeyaloFactory.createSpMeshok();
+        SQLiteSpMeshokContainer.insert(newOdeyalo);
+    }
 
     // METHOD insert
     //SpMeshok* insertMeshok = new Kokon("Columbia", -20, "Down");
 
-//  SQLiteSpMeshokContainer.insert(insertMeshok);
+    //SQLiteSpMeshokContainer.insert(insertMeshok);
 
     // METHOD display
     SQLiteSpMeshokContainer.display();
@@ -60,6 +74,8 @@ int main() {
 
     std::cout << "\nSQL Queries for SleepyBags Table:" << std::endl;
     sqlDecorator->displaySQLFormat();
+
+    delete sqlDecorator;
 
     return 0;
 }

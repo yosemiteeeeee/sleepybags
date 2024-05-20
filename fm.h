@@ -43,9 +43,39 @@ public:
 
 void populateContainer(Container& container, SpMeshokFactory& factory, int count) {
     for (int i = 0; i < count; ++i) {
-        container.insert(factory.createSpMeshok());
+        SpMeshok* newMeshok = factory.createSpMeshok();
+        newMeshok->describe();
+        container.insert(newMeshok);
     }
 }
 
+
+// SQL FabricMethod
+class SQLOdeyaloFactory : public SpMeshokFactory {
+public:
+    SpMeshok* createSpMeshok() override {
+        std::string type = "SQL Odeyalo";
+        int tempRating = rand() % 30;
+        bool doubleZipper = rand() % 2 == 0;
+        std::vector<std::string> brands = {"The North Face", "REI", "Columbia"};
+        std::string brand = brands[rand() % brands.size()];
+
+        return new Odeyalo(brand, tempRating, doubleZipper);
+    }
+};
+
+class SQLKokonFactory : public SpMeshokFactory {
+public:
+    SpMeshok* createSpMeshok() override {
+        std::string type = "SQL Kokon";
+        int tempRating = rand() % 30;
+        std::vector<std::string> brands = {"The North Face", "REI", "Outventure"};
+        std::string brand = brands[rand() % brands.size()];
+        std::vector<std::string> insulationTypes = {"Down", "Synthetic", "Feather"};
+        std::string insulation = insulationTypes[rand() % insulationTypes.size()];
+
+        return new Kokon(brand, tempRating, insulation);
+    }
+};
 
 #endif // FM_H_INCLUDED
