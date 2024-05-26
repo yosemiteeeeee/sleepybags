@@ -13,6 +13,7 @@ class Container {
 public:
     virtual void insert(SpMeshok* item) = 0;
     virtual void display() = 0;
+    virtual Iterator* createIterator() = 0;
 };
 
 class VectorContainer : public Container {
@@ -38,12 +39,13 @@ public:
         }
     }
 
-    VectorContainerIterator createIterator();
+    Iterator* createIterator() override {
+        return new VectorContainerIterator(items);
+    }
+
 };
 
-VectorContainerIterator VectorContainer::createIterator() {
-    return VectorContainerIterator(items);
-}
+
 
 class ArrayContainer : public Container {
 private:
@@ -69,12 +71,12 @@ public:
         }
     }
 
-    ArrayContainerIterator createIterator();
+    Iterator* createIterator() override {
+        return new ArrayContainerIterator(items, currentSize);
+    }
+
 };
 
-ArrayContainerIterator ArrayContainer::createIterator() {
-    return ArrayContainerIterator(items, currentSize);
-}
 
 // SQL container
 class SQLiteSpMeshok : public Container
@@ -183,6 +185,12 @@ public:
         }
         sqlite3_finalize(stmt);
     }
+
+    Iterator* createIterator() override {
+        const char* sql = "SELECT * FROM SleepyBags;";
+        return new SQLiteSpMeshokIterator(db, sql);
+    }
+
 };
 
 
