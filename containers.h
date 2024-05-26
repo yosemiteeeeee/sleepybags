@@ -39,6 +39,7 @@ public:
         }
     }
 
+// ZADAINIE
     Iterator* createIterator() override {
         return new VectorContainerIterator(items);
     }
@@ -71,6 +72,7 @@ public:
         }
     }
 
+// ZADAINIE
     Iterator* createIterator() override {
         return new ArrayContainerIterator(items, currentSize);
     }
@@ -186,6 +188,7 @@ public:
         sqlite3_finalize(stmt);
     }
 
+// ZADAINIE
     Iterator* createIterator() override {
         const char* sql = "SELECT * FROM SleepyBags;";
         return new SQLiteSpMeshokIterator(db, sql);

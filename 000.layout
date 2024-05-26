@@ -4,32 +4,58 @@
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="1209" topLine="0" />
+=======
+			<Cursor1 position="1419" topLine="19" />
+		</Cursor>
+	</File>
+	<File name="decorators.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="392" topLine="0" />
+>>>>>>> 84d73fefaf32b76365b3c29246c8adc2fe3e5ece
 		</Cursor>
 	</File>
 	<File name="fm.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="0" topLine="42" />
 		</Cursor>
 	</File>
 	<File name="decorators.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="240" topLine="0" />
+=======
+			<Cursor1 position="1475" topLine="42" />
+>>>>>>> 84d73fefaf32b76365b3c29246c8adc2fe3e5ece
 		</Cursor>
 	</File>
 	<File name="iterators.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="233" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="containers.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1726" topLine="56" />
+=======
+			<Cursor1 position="0" topLine="59" />
+>>>>>>> 84d73fefaf32b76365b3c29246c8adc2fe3e5ece
 		</Cursor>
 	</File>
 	<File name="header.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="0" topLine="57" />
+=======
+			<Cursor1 position="1903" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="containers.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2212" topLine="72" />
+>>>>>>> 84d73fefaf32b76365b3c29246c8adc2fe3e5ece
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

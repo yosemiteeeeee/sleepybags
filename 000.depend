@@ -17,7 +17,9 @@
 	<list>
 	<algorithm>
 
-1716728239 c:\users\artsh\desktop\sb\repo\containers.h
+1716728308 D
+
+1716728738 c:\users\artsh\desktop\sb\repo\containers.h
 	<vector>
 	<list>
 	<algorithm>
@@ -25,6 +27,23 @@
 	"sqlite3.h"
 	"iterators.h"
 	"header.h"
+
+1716227561 73fefaf32b76365b3c29246c8adc2fe3e5ece
+	<vector>
+	<list>
+	<algorithm>
+	<iostream>
+	"sqlite3.h"
+	"iterators.h"
+	"header.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<functional>
+	"header.h"
+	"iterators.h"
+	"containers.h"
 
 1716728308 c:\users\artsh\desktop\sb\repo\iterators.h
 	<iostream>
