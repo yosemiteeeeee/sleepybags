@@ -18,14 +18,14 @@ int main() {
     populateContainer(vecContainer, kokonFactory, rand() % 5 + 1);
     populateContainer(vecContainer, odeyaloFactory, rand() % 5 + 1);
 
-    VectorContainerIterator* iterator = new VectorContainerIterator(vecContainer.accessItems());
+    Iterator* iterator = vecContainer.createIterator();
 
     // Dekorator dlya filtracii (temperatura <= 10)
-    FilterDecorator* filterDecorator = new FilterDecorator(iterator, [](SpMeshok* item) {
+    Iterator* filterDecorator = new FilterDecorator(iterator, [](SpMeshok* item) {
         return item->getTemperatureRating() <= 10;
     });
 
-    OrderDecorator* orderDecorator = new OrderDecorator(filterDecorator);
+    Iterator* orderDecorator = new OrderDecorator(filterDecorator);
 
     while (orderDecorator->hasNext()) {
         orderDecorator->next()->describe();
